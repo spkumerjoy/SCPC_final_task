@@ -12,6 +12,8 @@ const inputString = "hello world";
 const outputString = reverseString(inputString);
 console.log(outputString);
 
+//--------------------------------------------------------------------------------------------
+
 // Task 2 : Create a function that takes an array of numbers as input and returns the sum of all positive numbers in the array.
 
 function sumPositiveNumbers(arr) {
@@ -27,6 +29,8 @@ function sumPositiveNumbers(arr) {
 const inputArray = [2, -5, 10, -3, 7];
 const outputSum = sumPositiveNumbers(inputArray);
 console.log(outputSum);
+
+//--------------------------------------------------------------------------------------------
 
 // Task 3: Write a JavaScript program to find the most frequent element in an array and return it.
 
@@ -51,6 +55,8 @@ const inputArr = [3, 5, 2, 5, 3, 3, 1, 4, 5];
 const output = findMostFrequentElement(inputArr);
 console.log(output);
 
+//--------------------------------------------------------------------------------------------
+
 // Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
 
 function calculate(num1, num2, operator) {
@@ -72,6 +78,8 @@ const num2 = 3;
 const operator = "+";
 const result = calculate(num1, num2, operator);
 console.log(result);
+
+//--------------------------------------------------------------------------------------------
 
 // Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
 
@@ -96,6 +104,8 @@ function generateRandomPassword(length) {
 const passwordLength = 12;
 const randomPassword = generateRandomPassword(passwordLength);
 console.log(randomPassword);
+
+//--------------------------------------------------------------------------------------------
 
 // Task 7: Implement a function that converts a Roman numeral to an integer. The function should take a Roman numeral string (e.g., "IX" or "XXI") as input and return the corresponding integer value.
 
@@ -128,3 +138,21 @@ function romanToInteger(romanNumeral) {
 
 const romanNumeral = "XXI";
 console.log(romanToInteger(romanNumeral));
+
+//--------------------------------------------------------------------------------------------
+
+// Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
+
+function findSecondSmallest(arr) {
+    if (arr.length < 2) {
+        return "Array should have at least two elements";
+    }
+
+    const sortedArr = arr.slice().sort((a, b) => a - b);
+    const secondSmallest = sortedArr[1];
+
+    return secondSmallest;
+}
+
+const numbers = [5, 3, 8, 1, 7, 2, 3];
+console.log(findSecondSmallest(numbers));
