@@ -50,3 +50,25 @@ function findMostFrequentElement(arr) {
 const inputArr = [3, 5, 2, 5, 3, 3, 1, 4, 5];
 const output = findMostFrequentElement(inputArr);
 console.log(output);
+
+// Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+
+function calculate(num1, num2, operator) {
+    return operator === "+"
+        ? num1 + num2
+        : operator === "-"
+        ? num1 - num2
+        : operator === "*"
+        ? num1 * num2
+        : operator === "/"
+        ? num2 !== 0
+            ? num1 / num2
+            : "Error: Cannot divide by zero"
+        : "Error: Invalid operator";
+}
+
+const num1 = 5;
+const num2 = 3;
+const operator = "+";
+const result = calculate(num1, num2, operator);
+console.log(result);
